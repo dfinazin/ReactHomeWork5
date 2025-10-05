@@ -1,0 +1,3 @@
+1. После установки  npm i eslint-config-prettier eslint-plugin-prettier prettier прописать в файл eslint.config.js extends: [ "prettier",], plugins: ["prettier"], и в настройки vscode в файл C:\Users\DFinazhin\AppData\Roaming\Code\User\settings.json путь "prettier.prettierPath": "./node_modules/prettier".
+2. Отображение длны строки задается в настройках vscode в файл C:\Users\DFinazhin\AppData\Roaming\Code\User\settings.json строкой "editor.rulers": [ 50 ],
+3.
