@@ -3,6 +3,12 @@ import styles from './app.module.css';
 
 export const App = () => {
     const [products, setProducts] = useState([]);
+    const [counter, setCounter] = useState(0);
+
+    useEffect(() => {
+        console.log('Первый колбэк', counter);
+        return () => console.log('Второй колбэк', counter);
+    }, [counter]);
 
     const loadProducts = async () => {
         try {
@@ -34,6 +40,13 @@ export const App = () => {
                         </div>
                     );
                 })}
+                <button
+                    onClick={() => {
+                        setCounter(counter + 1);
+                    }}
+                >
+                    {counter}
+                </button>
             </div>
         </>
     );
